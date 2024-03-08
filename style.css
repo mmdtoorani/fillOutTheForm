@@ -1,0 +1,130 @@
+body {
+  background-color: rgb(247, 253, 238);
+}
+/* button styles */
+
+.button-4 {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+
+/* ---------------------- */
+.main-container {
+  background-color: rgb(214, 225, 203);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+#left-form {
+  padding: 2rem;
+}
+
+#left-form > p,
+#left-form > h2 {
+  padding-block: 0.5rem;
+}
+
+#right-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#right-form > input {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 1251px) {
+  form {
+    padding-inline: 2rem;
+  }
+
+  #right-form,
+  #left-form {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-inline: 2rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .main-container {
+    width: 100%;
+    background-color: inherit;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+  }
+}
